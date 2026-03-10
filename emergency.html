@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Emergency Request</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>Emergency Request</h2>
+
+<div>
+<a href="dashboard.html">Dashboard</a>
+<a href="emergency.html">Emergency</a>
+<a href="safety.html">Safety Guide</a>
+<a href="admin.html">Admin</a>
+</div>
+
+</nav>
+
+<section class="form-container">
+
+<h2>Send Emergency Request</h2>
+
+<form id="emergencyForm">
+
+<label>Location</label>
+<input type="text" id="location" placeholder="Enter location" required>
+
+<label>Mobile Number</label>
+<input type="tel" id="phone" placeholder="Enter mobile number" required>
+
+<label>Emergency Description</label>
+<textarea id="description" placeholder="Describe emergency" required></textarea>
+
+<button type="button" onclick="shareLocation()">
+Share Live Location
+</button>
+
+<button type="submit">
+Send Emergency Request
+</button>
+
+</form>
+<br>
+<!-- ALERT MESSAGE -->
+<div id="alertBox" class="alert-box">
+🚨 Help will be approached to you via CALL or SMS
+</div>
+
+</section>
+
+<script src="js/emergency.js"></script>
+
+<script>
+
+/* share location */
+
+function shareLocation(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(function(position){
+
+let lat = position.coords.latitude
+let lon = position.coords.longitude
+
+document.getElementById("location").value =
+"Lat: " + lat + " , Lon: " + lon
+
+})
+
+}else{
+
+alert("Location not supported")
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>

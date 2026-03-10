@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<nav>
+
+<h2>Admin Control Panel</h2>
+
+<div>
+<a href="dashboard.html">Dashboard</a>
+<a href="emergency.html">Emergency</a>
+<a href="safety.html">Safety Guide</a>
+<a href="admin.html">Admin</a>
+</div>
+
+</nav>
+
+
+<section class="admin-wrapper">
+
+<h1 class="admin-title">System Analytics</h1>
+
+
+<div class="admin-grid">
+
+<div class="admin-card">
+
+<h3>Total Emergency Requests</h3>
+
+<p class="admin-number">128</p>
+
+</div>
+
+
+<div class="admin-card">
+
+<h3>Most Frequent Emergency</h3>
+
+<p class="admin-number">Theft</p>
+
+</div>
+
+
+<div class="admin-card">
+
+<h3>Active Users</h3>
+
+<p class="admin-number">42</p>
+
+</div>
+
+</div>
+
+
+
+<!-- RECENT REQUESTS -->
+
+<div class="admin-section">
+
+<h2>Recent Emergency Requests</h2>
+
+<ul class="request-list">
+
+<li>
+<span>Theft reported near City Market</span>
+<span class="status pending">Pending</span>
+</li>
+
+<li>
+<span>Medical emergency at hotel district</span>
+<span class="status resolved">Resolved</span>
+</li>
+
+<li>
+<span>Tourist lost passport at airport</span>
+<span class="status pending">Pending</span>
+</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- ADMIN ACTIONS -->
+
+<div class="admin-section">
+
+<h2>Admin Actions</h2>
+
+<div class="admin-actions">
+
+<button onclick="alert('Emergency broadcast sent')">
+Send Safety Alert
+</button>
+
+<button onclick="alert('Database refreshed')">
+Refresh Data
+</button>
+
+<button onclick="alert('System logs downloaded')">
+Download Logs
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- SYSTEM ACTIVITY -->
+
+<div class="admin-section">
+
+<h2>Live System Activity</h2>
+
+<ul class="activity-feed">
+
+<li>⚠ Theft alert generated for tourist zone</li>
+
+<li>📍 Location shared from emergency request</li>
+
+<li>🚑 Medical emergency request received</li>
+
+<li>🛂 Lost passport report submitted</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+</body>
+
+</html>
